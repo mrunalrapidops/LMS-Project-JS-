@@ -43,6 +43,10 @@ fwc().then(function(){
 	console.log('finished');
 })
 
+Promise.all([fwc(),swc(),thwc()]).then(function(){
+	console.log("all finish");
+})
+
 /*first(value){	
 	return value+2;
 }
