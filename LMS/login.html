@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>LMS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
+<link rel="icon" href="index.png" />
 <link rel="stylesheet" type="text/css" href="logincss.css">
-<script src="fetch.js"></script>
+
+<script type="text/javascript">
+  var today = new Date();
+  var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+  console.log(date)
+</script>
 </head>
-<body style="height: auto;width: 300px;" align="center">
-
-<h2>Login Form</h2>
-
-<form action="/action_page.php">
+<body>
+<div style="margin:auto;width:300px;">
+<div class="container" >
   
-  <div class="container">
+<h2>Login Form <script type="text/javascript">document.write(date)</script></h2>
+<div id="time"></div>
+<form style="border: 0px;" onsubmit="tbv()">
+  
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username"id="uname" name="name" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" id="pass" name="psw" required>
         
     <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot<a href="#">password?</a></span>
-  </div>
+    
 </form>
-
+</div>
+</div>
+<script src="fetch.js"></script>
 </body>
 </html>
