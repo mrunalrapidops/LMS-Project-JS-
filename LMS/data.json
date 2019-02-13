@@ -1,0 +1,34 @@
+
+   let data = [{
+              "id": "u001",
+              "userName": "mrunal",
+              "passWord": "pass123",
+              "admin": true,
+              "email": "m@g.com"
+            },
+            {
+              "id": "u002",
+              "userName": "kishor",
+              "passWord": "pass456",
+              "admin": false,
+              "email" : "k@g.com",
+              "course" :["HTML","CSS","Java Script"]
+            },{
+              "id": "u003",
+              "userName": "mrunal",
+              "passWord": "123pass",
+              "admin": false,
+              "email" : "mr@g.com",
+              "course" :["HTML"]
+            },
+            {
+              "id": "u004",
+              "userName": "akshay",
+              "passWord": "pass789",
+              "admin": false,
+              "email" : "a@g.com",
+              "course" :["HTML","CSS"]
+
+            }
+          ]
+ 

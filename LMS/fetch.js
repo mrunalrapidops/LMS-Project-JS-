@@ -9,10 +9,12 @@ function getdata(){
 sitename = localStorage.getItem('siteName');
 document.write (sitename);
 }
-setTimeout(adddata(),5000);
+
+
+/*setTimeout(adddata(),5000);
 setTimeout(getdata(),5000);
 setTimeout(removedata(),5000);
-
+*/
 //const promise = new Promise((resolve,reject)=>)
 const pro = fetch('https://api.myjson.com/bins/17cnou');
  pro.then(res=>res.json())// res.json()also promise
@@ -86,9 +88,35 @@ Promise.all([fwc(),swc(),thwc()]).then(function(){
 
 
 function tbv(){
-var un = document.getElementById("uname").value ;
+var mail = document.getElementById("mail").value ;
 var pass = document.getElementById("pass").value ;
+//var isAdmin = load()
+var name = load(mail,pass);
 }
+function load(mail,pass) {	
+					var a = new Array()
+					 var str = JSON.stringify(data);
+                     var mydata = JSON.parse(str);
+                     if(typeof(mydata) == "object")
+                     { 
+							var mydata1 = JSON.stringify(mydata);
+							var mydata1 = JSON.parse(mydata1);
+                     }
+                     console.log(name);
+                     for(var i = 0;i < mydata1.length; i++)
+                     {	
+                     	if( mydata1[i].email == mail && mydata1[i].passWord == pass){
+                     		a.push(mydata1[i].userName + "login");	
+                     	}
+                     	
+                     	/*console.log(mydata1[i].userName);
+                     	a.push(mydata1[i].userName);*/
+                     }
+                     if(a.length <= 0){
+                     	alert("invalid user")
+                     }
+                     console.log(a);
+                 }
 
 /*first(value){	
 	return value+2;
@@ -155,4 +183,19 @@ syncronus4 fetch.js:4:1
 timeout3 fetch.js:3:29
 roomnot clean fetch.js:18:2
 hllo2
+*/
+/* Dabble user name
+for(var i = 0;i < mydata1.length; i++)
+                     {	
+                     	if(mydata1[i].userName == name){
+                     		a.push(mydata1[i].userName);	
+                     	}	
+                     	console.log(mydata1[i].userName);
+                     	a.push(mydata1[i].userName);
+                     }
+                     if(a.length <= 0){
+                     	alert("invalid user")
+                     }
+                     console.log(a);
+                 }
 */
