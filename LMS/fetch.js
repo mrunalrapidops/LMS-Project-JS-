@@ -1,3 +1,39 @@
+function adddata(){
+var siteName='LMSfetch';
+localStorage.setItem('siteName',siteName);	
+}
+function removedata(){
+localStorage.removeItem('siteName');	
+}
+function getdata(){
+sitename = localStorage.getItem('siteName');
+document.write (sitename);
+}
+setTimeout(adddata(),5000);
+setTimeout(getdata(),5000);
+setTimeout(removedata(),5000);
+
+//const promise = new Promise((resolve,reject)=>)
+const pro = fetch('https://api.myjson.com/bins/17cnou');
+ pro.then(res=>res.json())// res.json()also promise
+	.then(user=> console.log(user[0].album))//array of objects
+	.catch(err => console.log("it's array of objects and somthing going wrong")) 
+	console.log("syncronus");
+//async await
+async function getdata(){
+	try{
+		const pro = fetch('https://api.myjson.com/bins/17cnou');
+		const prom =fetch('https://api.myjson.com/bins/i43cu');
+		const pro1 = await	pro;
+		const pro2 = await	prom;
+	}
+	catch(err){
+		console.log("err",err);
+	}
+
+}
+getdata();
+
 
 let p = new Promise(function(resolve,reject){
 	let isClean = false;
@@ -47,6 +83,13 @@ Promise.all([fwc(),swc(),thwc()]).then(function(){
 	console.log("all finish");
 })
 
+
+
+function tbv(){
+var un = document.getElementById("uname").value ;
+var pass = document.getElementById("pass").value ;
+}
+
 /*first(value){	
 	return value+2;
 }
@@ -57,11 +100,6 @@ function third(value){
 	return value+2;
 }*/
 
-
-function tbv(){
-var un = document.getElementById("uname").value ;
-var pass = document.getElementById("pass").value ;
-}
 
 //fetch from myjson.com
 /*	fetch('https://api.myjson.com/bins/jer52')
@@ -93,3 +131,28 @@ function startTime() {
   }, 1000);
 }
 startTime();*/
+/* Arrow funcion call
+var x  = function(a){ return a }
+var y = a => a ;
+var z = () => {alert ("hi");} ;
+console.log(x(5));
+console.log(y(6));
+function say(){
+	console.log("say fun call");
+}
+console.log("wait start");
+setTimeout(say,5000);
+//setInterval(say,1000);//continus print
+say();
+*/
+/*console.log("syncronus");
+setTimeout(() =>console.log('hllo2'),2000);
+Promise.resolve().then( ()=>console.log("timeout3"));
+console.log("syncronus4");*/
+/*output
+syncronus fetch.js:1:1
+syncronus4 fetch.js:4:1
+timeout3 fetch.js:3:29
+roomnot clean fetch.js:18:2
+hllo2
+*/
