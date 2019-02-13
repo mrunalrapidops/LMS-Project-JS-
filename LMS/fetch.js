@@ -1,3 +1,4 @@
+//local storage
 function adddata(){
 var siteName='LMSfetch';
 localStorage.setItem('siteName',siteName);	
@@ -106,17 +107,17 @@ function load(mail,pass) {
                      for(var i = 0;i < mydata1.length; i++)
                      {	
                      	if( mydata1[i].email == mail && mydata1[i].passWord == pass){
-                     		a.push(mydata1[i].userName + "login");	
-                     	}
-                     	
-                     	/*console.log(mydata1[i].userName);
-                     	a.push(mydata1[i].userName);*/
+                     		a.push(mydata1[i].userName + "login");
+                     		isAdmin=mydata1[i].admin	
+                     		window.location="home.html?admin="+isAdmin;
+                     	}                     	
                      }
                      if(a.length <= 0){
                      	alert("invalid user")
                      }
                      console.log(a);
                  }
+//class admin
 
 /*first(value){	
 	return value+2;
