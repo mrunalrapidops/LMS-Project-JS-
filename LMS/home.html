@@ -6,12 +6,17 @@
 	<!-- <link rel="stylesheet" type="text/css" href="home.css">
 	<link rel="icon" href="index.png" />
 	<script src="home.js"></script> -->
+	<script src="data.json"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+
 </head>
 <body>
+	<input type="button" value="loadata" onclick="addrow()">
 	<ul>
 	  <li><a class="active" href="#" data-target="admin">Admin</a></li>
-	  <li><a href="#news"  data-target="student">courses</a></li>
-	  <li><a href="#contact" data-target="Course">Student</a></li>
+	  <li><a href="#student"  data-target="student">courses</a></li>
+	  <li><a href="#Course" data-target="Course">Student</a></li>
 	</ul>
 	<br>
 <div class="page active" id="admin">
@@ -27,7 +32,7 @@
 				<td><button type="button">Search user</button></td>
 			</tr>
 			</table>
-			<table border="1px" style="width:300px">
+			<table border="1px" style="width:300px" id="student_Details">
 				<p>List Of student of Preticular Bach
 				<select>
 					<option>Select Branch</option>
@@ -40,6 +45,7 @@
 			      <th>Password</th>
 			      <th>Admin</th>
 			      <th>Email</th>
+			      <th>course</th>
 			      <th>Batch</th>
 			      <th>search</th>
 			      <th>Edit</th>
@@ -52,7 +58,8 @@
 			      <td>Smith</td>        
 			      <td>50</td>
 			      <td>Admin</td>
-			      <td>Email</td> 
+			      <td>Email</td>
+				  <td>course</td>			      
 			      <td>batch</td>
 			      <td><button type="button">search</button></td>
 			      <td><button type="button">Edit</button></td>
@@ -199,7 +206,7 @@
 			<input type="button" name="" value="confirm">
 			<input type="button" name="" value="Edit student data">
 		</p>
-			<table border="1px" style="width:300px">
+			<table border="1px" style="width:300px" id="datatable">
 			<thead>
 			   <tr>
 			      <th>Course Type</th>
@@ -261,4 +268,5 @@
 </div>
 <!--Course End-->
 </body>
+<script src="home.js"></script>
 </html>

@@ -4,7 +4,9 @@
               "userName": "mrunal",
               "passWord": "pass123",
               "admin": true,
-              "email": "m@g.com"
+              "email": "m@g.com",
+               "course" : "-",
+              "batch" : "-"
             },
             {
               "id": "u002",
