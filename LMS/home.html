@@ -1,9 +1,264 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>LMS</title>
+	<!-- <link rel="stylesheet" type="text/css" href="home.css">
+	<link rel="icon" href="index.png" />
+	<script src="home.js"></script> -->
 </head>
 <body>
-<h1>Home Page</h1>
+	<ul>
+	  <li><a class="active" href="#" data-target="admin">Admin</a></li>
+	  <li><a href="#news"  data-target="student">courses</a></li>
+	  <li><a href="#contact" data-target="Course">Student</a></li>
+	</ul>
+	<br>
+<div class="page active" id="admin">
+	<fieldset style="border: 1px black solid">
+		<legend style="border: 1px black solid;margin-left: 1em; padding: 0.2em 0.8em ">"ADMIN"</legend>
+	<div id="Admin">
+		 	<!-- <h1>Home Page</h1> -->
+			<h2>Student</h2>
+			<table>
+				<th align="left">Search</th>
+			<tr>
+				<td><input type="text" name="search"></td>
+				<td><button type="button">Search user</button></td>
+			</tr>
+			</table>
+			<table border="1px" style="width:300px">
+				<p>List Of student of Preticular Bach
+				<select>
+					<option>Select Branch</option>
+				</select>
+				</p>
+			  <thead>
+			    <tr>
+			      <th>id</th>
+			      <th>UserName</th>
+			      <th>Password</th>
+			      <th>Admin</th>
+			      <th>Email</th>
+			      <th>Batch</th>
+			      <th>search</th>
+			      <th>Edit</th>
+			      <th>Delete</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Jill</td>
+			      <td>Smith</td>        
+			      <td>50</td>
+			      <td>Admin</td>
+			      <td>Email</td> 
+			      <td>batch</td>
+			      <td><button type="button">search</button></td>
+			      <td><button type="button">Edit</button></td>
+			      <td><button type="button">Delete	</button></td>
+			    </tr>
+			  </tbody>
+			</table>
+	<!-- 		<p>--------------------------</p> -->
+			<h2>Insert & Edit Data</h2><!--single-->
+			<table border="1px" style="width:300px">
+			<thead>
+			   <tr>
+			      <th>Filds</th>
+			      <th>Data</th>
+			  </tr>
+			</thead>
+			  <tr>
+			  	<td>id</td>
+			    <td><input type="text" name="idedit"></td>
+			  </tr>
+			  <tr>    
+			    <td>UserName</td>
+			     <td><input type="text" name="idedit"></td>
+			  </tr>
+			  <tr>
+			    <td>Password</td>
+			     <td><input type="text" name="idedit"></td> 
+			  </tr>
+			  <tr>
+			    <td>Admin</td>
+			     <td>
+			     	<input type="radio" name="isadmin">True
+			     	<input type="radio" name="isadmin" checked>False
+			     </td>
+			  </tr>
+			  <tr>
+			    <td>Email</td>
+			    <td><input type="text" name="idedit"></td>
+			  </tr>  
+			  <tr style="column-span: 2">
+			    <td colspan="2"><button type="button">Insert</button>
+			    				<button type="button">Update</button>
+			    </td>
+			  </tr>    
+			</table>
+			<p>--------------------------</p>
+			<h2>Courses</h2><!--single-->
+			<h2>Insert & Edit Courses</h2>
+			<table border="1px" style="width:300px">
+			  <thead>
+			    <tr>
+			      <th>Type</th>
+			      <th>Cource Name</th>
+			      <th>link</th>
+			      <th>Insert</th>
+			      <th>Edit</th>
+			      <th>delete</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>
+			    <select>
+					<option>Select Branch</option>
+				</select>
+			      </td>
+			      <td><input type="text"></td> 
+			      <td><input type="text"></td> 
+			       <td><button type="button">Insert</button></td>
+			      <td><button type="button">Edit/Update</button></td>
+			      <td><button type="button">Delete	</button></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<h2> Student Course Request</h2>
+			<table border="1px" style="width:300px">
+			<thead>
+			   <tr>
+			      <th>Student Name</th>
+			      <th>Student Batch</th>
+			      <th>Progress</th>
+			      <th>Cource Branch</th>
+			      <th>Course</th>
+			      <th>Assign</th>
+			      <th> Confirmation</th>
+
+			  </tr>
+			</thead>
+			  <tr>
+			    <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td>
+			     <select>
+					<option>Select Branch</option>
+				</select>	
+			     </td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><button type="button">Assign</button></td> 
+			     <td><button type="button">Confirm</button></td> 
+			  </tr>
+			   
+			</table>
+			<h2> Student Course status</h2>
+			<table>
+				<th align="left">Search Student</th>
+				<th align="left">Student Batch</th>
+			<tr>
+				<td><input type="text" name="search"></td>
+				<td><input type="text" name="Batch"></td>
+				<td><button type="button">Search user</button></td>
+			</tr>
+			</table>
+			<table border="1px" style="width:300px">
+			<thead>
+			   <tr>
+			      <th>Student Name</th>
+			      <th>Student Batch</th>
+			      <th>Progress</th>
+			      <th>Cource Branch</th>
+			  </tr>
+			</thead>
+			  <tr>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			   </tr>
+			</table>
+	</div>
+</fieldset>
+</div>
+
+	<!--Admin End-->	
+<!--</fieldset>-->
+</br>
+<!--Student start-->
+<div class="page" id="student">
+	<fieldset style="border: 1px black solid">
+		<legend style="border: 1px black solid;margin-left: 1em; padding: 0.2em 0.8em ">"Student"</legend>
+		<div name="Student">
+			<h2>Student</h2>
+		<p>You assign <input type="text">Course
+			<input type="button" name="" value="confirm">
+			<input type="button" name="" value="Edit student data">
+		</p>
+			<table border="1px" style="width:300px">
+			<thead>
+			   <tr>
+			      <th>Course Type</th>
+			      <th>Course Name</th>
+			      <th>Course Status</th>
+			      <th>Cource Progress</th>
+			      <th>Cource Link</th>
+			  </tr>
+			</thead>
+			  <tr>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit"></td>
+			  </tr>
+			</table>
+		</div>
+	</fieldset>
+</div>
+<!--Student End-->
+	<br>
+<!--Course-->
+<div class="page" id="Course">
+	<fieldset style="border: 1px black solid">
+		<legend style="border: 1px black solid;margin-left: 1em; padding: 0.2em 0.8em ">"course"</legend>
+		<div name="course">
+			<h2>Course</h2>
+
+			<table>
+				<tr>
+					<td>HTML</td>
+					<td><button type="button">Complate Page1</button></td>
+					<td><button type="button">Complate Page2</button></td>
+					<td><button type="button">Complate Page3</button></td>
+					<td><button type="button">Complate Page4</button></td>
+					<td><button type="button">Complate Page5</button></td>
+					<td><button type="button">Complate HTML</button></td>
+				</tr>
+				<tr>
+					<td>CSS</td>
+					<td><button type="button">Complate Page1</button></td>
+					<td><button type="button">Complate Page2</button></td>
+					<td><button type="button">Complate Page3</button></td>
+					<td><button type="button">Complate Page4</button></td>
+					<td><button type="button">Complate CSS</button></td>
+				</tr>
+				<tr>
+					<td>GIT</td>
+					<td><button type="button">Complate Page1</button></td>
+					<td><button type="button">Complate Page2</button></td>
+					<td><button type="button">Complate Page3</button></td>
+					<td><button type="button">Complate GIT</button></td>
+				</tr>
+			</table>
+			<p> current status<input type="text"></p>
+		</div>
+	</fieldset>
+</div>
+<!--Course End-->
 </body>
 </html>

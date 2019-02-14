@@ -12,14 +12,16 @@
               "passWord": "pass456",
               "admin": false,
               "email" : "k@g.com",
-              "course" :["HTML","CSS","Java Script"]
+              "course" : ["Basic",4], //["HTML","CSS","How web Works","Git&GitHub"]
+              "batch" : 2019
             },{
               "id": "u003",
               "userName": "mrunal",
               "passWord": "123pass",
               "admin": false,
               "email" : "mr@g.com",
-              "course" :["HTML"]
+              "course" :["Advance",1],
+              "batch" : 2019
             },
             {
               "id": "u004",
@@ -27,8 +29,13 @@
               "passWord": "pass789",
               "admin": false,
               "email" : "a@g.com",
-              "course" :["HTML","CSS"]
-
+              "course" :["Basic",4],
+              "batch" : 2019
             }
           ]
+
+   let courses=[{
+                "Basic"  :["HTML","CSS","How web Works","Git&GitHub","Java SCript","json"],
+                "Advance":["Node.js","Angular.js","jquery"]
+              }] 
  
