@@ -1,9 +1,9 @@
 
-   let data = [{
-              "id": "a1",
+{
+         "EMP":[{"id":"a1",
               "userName": "mrunal",
               "passWord": "pass123",
-              "admin": true,
+              "admin": "true",
               "email": "m@g.com",
                "course" : "-",
               "batch" : "-"
@@ -12,32 +12,26 @@
               "id": "u1",
               "userName": "kishor",
               "passWord": "pass456",
-              "admin": false,
+              "admin": "false",
               "email" : "k@g.com",
-              "course" : ["Basic",4], //["HTML","CSS","How web Works","Git&GitHub"]
-              "batch" : 2019
+              "course" : "4",
+              "batch" : "2019"
             },{
               "id": "u2",
               "userName": "mrunal",
               "passWord": "123pass",
-              "admin": false,
+              "admin": "false",
               "email" : "mr@g.com",
-              "course" :["Basic",1],
-              "batch" : 2019
+              "course" :"1",
+              "batch" : "2019"
             },
             {
               "id": "u3",
               "userName": "akshay",
               "passWord": "pass789",
-              "admin": false,
+              "admin": "false",
               "email" : "a@g.com",
-              "course" :["Basic",4],
-              "batch" : 2019
-            }
-          ]
-
-   let courses=[{
-                "Basic"  :["HTML","CSS","How web Works","Git&GitHub","Java SCript","json"],
-                "Advance":["Node.js","Angular.js","jquery"]
-              }]
-   
+              "course" :"4",
+              "batch" : "2019"
+            }]
+}

@@ -40,6 +40,7 @@
 				</p>
 			  <thead>
 			    <tr>
+			      <th>MD</th>		
 			      <th>id</th>
 			      <th>UserName</th>
 			      <th>Password</th>
@@ -53,7 +54,7 @@
 			    </tr>
 			  </thead>
 			  <tbody>
-			    <tr>
+			   <!--  <tr>
 			      <td>Jill</td>
 			      <td>Smith</td>        
 			      <td>50</td>
@@ -64,11 +65,16 @@
 			      <td><button type="button">search</button></td>
 			      <td><button type="button">Edit</button></td>
 			      <td><button type="button">Delete	</button></td>
-			    </tr>
+			    </tr> -->
 			  </tbody>
 			</table>
-	<!-- 		<p>--------------------------</p> -->
+			<input type="button" value="Multi Delete(MD)">
+	 		<p>--------------------------</p> 
+
+	
+	
 			<h2>Insert & Edit Data</h2><!--single-->
+			<input type="button" value="load default data" onclick="dd()">
 			<table border="1px" style="width:300px">
 			<thead>
 			   <tr>
@@ -78,15 +84,15 @@
 			</thead>
 			  <tr>
 			  	<td>id</td>
-			    <td><input type="text" name="idedit"></td>
+			    <td><input type="text" name="idedit" id="iid" readonly></td>
 			  </tr>
 			  <tr>    
 			    <td>UserName</td>
-			     <td><input type="text" name="idedit"></td>
+			     <td><input type="text" name="idedit" id="un"></td>
 			  </tr>
 			  <tr>
 			    <td>Password</td>
-			     <td><input type="text" name="idedit"></td> 
+			     <td><input type="text" name="idedit" id="pass"></td> 
 			  </tr>
 			  <tr>
 			    <td>Admin</td>
@@ -97,16 +103,25 @@
 			  </tr>
 			  <tr>
 			    <td>Email</td>
-			    <td><input type="text" name="idedit"></td>
+			    <td><input type="text" name="idedit" id="mail"></td>
+			  </tr>  
+			   <tr>
+			    <td>course</td>
+			    <td><input type="text" name="idedit" id="course"></td>
+			  </tr>  
+			   <tr>
+			    <td>batch</td>
+			    <td><input type="text" name="idedit" id="batch"></td>
 			  </tr>  
 			  <tr style="column-span: 2">
-			    <td colspan="2"><button type="button">Insert</button>
+			    <td colspan="2"><button type="button" onclick="insertdata()">Insert</button>
 			    				<button type="button">Update</button>
 			    </td>
 			  </tr>    
 			</table>
 			<p>--------------------------</p>
 			<h2>Courses</h2><!--single-->
+			<h2>Display Courses</h2>
 			<h2>Insert & Edit Courses</h2>
 			<table border="1px" style="width:300px">
 			  <thead>
