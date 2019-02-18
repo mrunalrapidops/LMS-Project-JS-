@@ -1,0 +1,112 @@
+Apology for Inconvenience
+This is to inform you that yesterday(29/1/2019). I was not be able to attend my trainingat office due to sickness. In the present situation,Please consider this application for official record.
+The full recovery of my training may take one or two days but i will try my best to cover as fast as possible 
+console.log(typeof(s1))
+var sample_input = [1,2,"mrunal","raj",[0,2,4],function add(val1,val2){return val1+val2},new Date(),{1:"one",2:"two",3:"three"},{"isbn": ["123-456-222"], "author": {"lname": "Doe","fname": "Jane"}}]
+function prog1(sample_input)
+{
+
+	//typeof(var);// first check type then process
+}
+
+switch(val){
+	case number:
+	 //return "its no."
+	 //count process of value
+	 //display respected key and value 
+	break;
+	case string:
+	ans = ""
+	//print name as key and it's value
+	//display respected key and value
+	break;
+	case undefined:
+	ans = ""
+	//print undefined
+	//no change in key and value	
+	break;
+	case boolean:
+	ans = ""
+	//print boolean
+	//display respected key and value
+	break;
+	case object:	
+	/*	if(function){
+			//key as itis value change by functions value
+		}
+		if(Date){
+			//key as itis value change by date's value
+		}*/
+	ans = ""
+	//print obj's key and process value
+	//can array,function,date,math
+	//display respected key and value
+	break;
+	case Array:
+	ans = ""
+	break;
+	//print array 
+	//display respected key and value
+	default:
+	ans = "None of this"
+	//No change in key value pair
+	break;
+}
+//return count;
+
+------------------------------------------------------------------------------------------------
+console.log(typeof(s1))
+var sample_input = [1,2,"mrunal","raj",[0,2,4],function add(val1,val2){return val1+val2},new Date(),{1:"one",2:"two",3:"three"},{"isbn": ["123-456-222"], "author": {"lname": "Doe","fname": "Jane"}}]
+function prog1(sample_input)
+{
+
+	//typeof(var);// first check type then process
+}
+
+switch(val){
+	case number:
+	 //return "its no."
+	 //count process of value
+	 //display respected key and value 
+	break;
+	case string:
+	ans = ""
+	//print name as key and it's value
+	//display respected key and value
+	break;
+	case undefined:
+	ans = ""
+	//print undefined
+	//no change in key and value	
+	break;
+	case boolean:
+	ans = ""
+	//print boolean
+	//display respected key and value
+	break;
+	case object:	
+	/*	if(function){
+			//key as itis value change by functions value
+		}
+		if(Date){
+			//key as itis value change by date's value
+		}*/
+	ans = ""
+	//print obj's key and process value
+	//can array,function,date,math
+	//display respected key and value
+	break;
+	case Array:
+	ans = ""
+	break;
+	//print array 
+	//display respected key and value
+	default:
+	ans = "None of this"
+	//No change in key value pair
+	break;
+}
+//return count;
+
+
+

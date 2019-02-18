@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>task 1</title>
+
+<script type="text/javascript">
+	console.log(typeof(s1))
+var sample_input = [1,2,"mrunal","raj",[0,2,4],true,function add(val1,val2){return val1+val2},new Date(),{1:"one",2:"two",3:"three"},{"isbn": ["123-456-222"], "author": {"lname": "Doe","fname": "Jane"}}]
+//document.write(Date());
+var al = sample_input.length
+document.getElementById("so").innerHTML = sample_input;
+//document.write
+alert(al);
+document.write("al");
+var count = 0;
+for(var i=0;i<=al-1;i++)
+{	
+	var type = typeof(sample_input[i]);
+	if (type == "number"){
+	//return "its no."
+	//count process of value
+	//display respected key and value 
+	var count = i+sample_input[i]
+	console.log(i , sample_input[i] ,"no.", count);
+
+	}
+	else if(type == "string"){
+	//print name as key and it's value
+	//display respected key and value
+	console.log(i , sample_input[i] ,"string", sample_input[i]);
+	}
+	else if(type == "object"){
+		//sample_input[i] instanceof Date 
+
+		if (Array.isArray(sample_input[i])){
+			//key as itis display array
+			
+			var nl = sample_input[i].length
+			for (var j=0;j>=nl-1;j++){
+				console.log(i , sample_input[i][j] ,"inside array", sample_input[i][j]);
+			}
+			console.log(i , sample_input[i] ,"Array", count);
+			continue;
+		}
+		if (sample_input[i] instanceof Date){
+		    //key as itis value change by date's value
+		    console.log(i , sample_input[i] ,"date", count);	
+		    continue;
+		}
+	console.log(i , sample_input[i] ,"obj", count);
+	}
+	else if(type == "function"){
+		//key as itis value change by functions value
+		//print obj's key and process value
+	console.log(i , sample_input[i] ,"fun",sample_input[i](10,20) );
+	}
+	else if(type == "boolean"){
+	//print boolean
+	//display respected key and value	
+	console.log(i , sample_input[i] ,"bool", count);
+	}
+	else{
+		console.log("other thing please check")
+	}
+	 
+}
+</script>
+</head>
+<body>
+<p id="output">
+
+</p>
+<input type="text" name="script_output" id="so" placeholder="so">
+</body>
+</html>

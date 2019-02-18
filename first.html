@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> js file </title>
+	<meta charset="utf-8" / >
+
+<script type="text/javascript">
+	console.log("Hello world");
+	var rem = 10 % 3 ;
+	console.log("rem"+rem);
+	mystr="jello"
+	mystr [0] = "H"
+	console.log(mystr)
+	mystr="hello"
+
+console.log(mystr)
+var myarry=[50,60,70] //array single dimention
+console.log(myarry)
+var my_arry=[["Hi",1],["hello",2],["hy",3]]// multi dimention array
+console.log(myarry[1][0])
+//pusu pop shift unshift opration on array
+myarry.push(80)
+console.log(myarry)
+myarry.push([90])//add array
+console.log(myarry[4][0])
+myarry.pop()//remove from back
+console.log(myarry)
+myarry.shift()//remove from front
+console.log(myarry)
+myarry.unshift(580)//remove from front
+console.log(myarry)
+console.log(typeof (myarry))
+console.log(typeof (mystr))
+console.log(typeof (m))
+console.log(Array.isArray([1, 2, 3]))
+console.log(Array.isArray(myarry))
+console.log(Array.isArray(mystr)) // string os not array in js
+var boolvar = false
+console.log(typeof(boolvar))
+var nullvar = null
+console.log(typeof(nullvar))
+console.log(typeof (rem))
+function check_dt(anythingasargs)
+{
+	if (anythingasargs == null ){
+		retern("undefine variable ple check agine")
+	}
+	
+	else{
+  		if (Array.isArray(anythingasargs) == true ){
+  			console.log("you are true about function")
+  			}
+
+  		else{
+  			console.log("try to know more becauze it's " + typeof(anythingasargs))
+
+  		}
+  	}
+}
+check_dt(rem)
+check_dt(myarry)
+check_dt(mystr)
+check_dt(my_arry)
+check_dt(boolvar)
+str = JSON.stringify(myarry)
+console.log(typeof (str))
+function eq_stricteq(var1,var2)
+{
+	if (var1 === var2)
+		console.log("eq_strict_pass")
+	else if(var1 == var2)
+		console.log(" eq_pass but not strict_eq")
+	else
+		console.log("fail")
+}
+eq_stricteq(10,'10')
+function tof(isItTrue)
+{
+	if(isItTrue)
+	{
+		return "Yes, It's true";
+	}
+	return "No,it's false";
+}
+function tof1(was)
+{
+	if(was)
+	{
+		return "Yes, It's true";
+	}
+	return "No,it's false";
+}
+console.log(tof());
+console.log(tof1([]));
+
+var dt=["number","array","undefined","object","boolean","string"]
+var arr = [1,2,3,4]
+console.log(" iiiiits"+typeof(arr))// both are object
+console.log(arr)
+var obj = {1:10,2:4}
+console.log("ooots"+typeof(obj))// both are object
+console.log(obj) 
+console.log(arr)
+function identify_array_or_not(variables)
+{
+	return console.log(Array.isArray(variables))
+}
+
+identify_array_or_not(arr)
+identify_array_or_not(obj)
+//if type function then with variable name giv parameters
+var fun =function add(val1,val2){console.log(val1+val2);}
+console.log("function is "+typeof(fun))
+fun(10,12)
+
+function MyFunc() {
+    this.x = 100;
+    this.y = 150;
+    this.ans=this.x+this.y;
+   return this.ans;
+}
+var obj1 = new MyFunc();
+console.log(obj1.ans);
+
+var today = new Date();
+console.log(today + typeof(today));//object
+
+var d = new Date(2018, 11, 24);
+var d1 = [2018, 11, 24];
+console.log(typeof d);
+console.log(d instanceof Date); // to check date or not
+console.log(d1 instanceof Date); // to check date or not
+console.log(typeof(new Date()));
+/*console.log(d instanceof Array);
+console.log(d instanceof Object);
+console.log(d instanceof String);*/
+//var dateObject = new Date();
+
+// is it date?
+/*var dateArray = [2012, 6, 5];
+function getFormatedDate(dateArray) {
+    if (date) {
+       var month = date.GetMonth();
+       console.log(month);
+    }
+}
+var dateObject = new Date(dateArray);
+console.log(dateObject);
+
+var no = 10; 
+typeof(arr)
+console.log("its " + dt[0])
+*/
+console.log(typeof(s1))
+var sample_input = [1,2,"mrunal","raj",[0,2,4],true,function add(val1,val2){return val1+val2},new Date(),{1:"one",2:"two",3:"three"},{"isbn": ["123-456-222"], "author": {"lname": "Doe","fname": "Jane"}}]
+//var sample_input = ["abc","def"]
+function prog1()
+{
+
+	//typeof(var);// first check type then process
+}
+
+//var arr = [1,2,3]
+console.log("k v t      co");
+var al = sample_input.length
+//console.log(al);
+var count = 0;
+for(var i=0;i<=al-1;i++)
+{	
+	var type = typeof(sample_input[i]);
+	if (type == "number"){
+	//return "its no."
+	//count process of value
+	//display respected key and value 
+	var count = i+sample_input[i]
+	console.log(i , sample_input[i] ,"no.", count);
+
+	}
+	else if(type == "string"){
+	//print name as key and it's value
+	//display respected key and value
+	console.log(i , sample_input[i] ,"string", sample_input[i]);
+	}
+	else if(type == "object"){
+		//sample_input[i] instanceof Date 
+
+		if (Array.isArray(sample_input[i])){
+			//key as itis display array
+			
+			var nl = sample_input[i].length
+			console.log(nl)
+			for (var j=0;j>=nl-1;j++){
+				console.log(i , sample_input[i][j] ,"inside array", sample_input[i][j]);
+			}
+			console.log(i , sample_input[i] ,"Array", count);
+			continue;
+		}
+		if (sample_input[i] instanceof Date){
+		    //key as itis value change by date's value
+		    console.log(i , sample_input[i] ,"date", count);	
+		    continue;
+		}
+	console.log(i , sample_input[i] ,"obj", count);
+	}
+	else if(type == "function"){
+		//key as itis value change by functions value
+		//print obj's key and process value
+	console.log(i , sample_input[i] ,"fun",sample_input[i](10,20) );
+	}
+	else if(type == "boolean"){
+	//print boolean
+	//display respected key and value	
+	console.log(i , sample_input[i] ,"bool", count);
+	}
+	else{
+		console.log("other thing please check")
+	}
+	 
+}
+var i20 = {
+	"color":"white",
+	"company":"Hyundai",
+	"qty":1,
+	"like":["everyone"],
+	"a":{"b":"print b"}
+
+	}
+
+//access objects value
+document.write("no of key" +" "+Object.keys(i20).length)
+var color = i20.color;
+var company = i20["company"];
+var qty = i20[2];
+
+
+    var text = "<table border ='1'><tr><th>Key</th><th>values</th></tr>"
+for(let key in i20){
+	//document.write(key)
+	//document.write(i20[key]);*/
+	let value=i20[key]
+	 if (typeof(i20[key]) == "object" && !(Array.isArray(i20[key])))
+	{
+		//obj = JSON.stringify(i20[key]);
+		//document.write(obj);	
+		 value = (Object.keys(i20[key]))
+		 document.write(value);
+
+		 text+="<tr><td>"+key+"</td><td>"+value+" "+"objval"+"</td></tr>"
+		 continue;
+	}
+	
+	text+="<tr><td>"+key+"</td><td>"+value+"</td></tr>"
+	text+="</table>";
+    document.write(text);
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+

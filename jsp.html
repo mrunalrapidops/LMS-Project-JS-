@@ -1,0 +1,55 @@
+<html>
+   <body>
+       <script>
+
+            var aProperty;
+            document.write("Navigator Object Properties<br /> ");
+            document.write("----------------------------------"+"<br>");
+        var car = {
+                    type:"Fiat",
+                    model:"500",
+                    color:"white",
+                    sub:{
+                            subtype:"SUV",
+                            roof:true
+                        },
+                    Avg:{
+                            "off-road":"10",
+                            highway:15,
+                            regular:{city:"10-12"},
+                            wether:{
+                                    summer:{highway:{Ac:[{on:9},{off:9.5}]}},
+                                    winter:{highway:10,"hitter-on":9,"hitter-off":9.5},
+                                    monsoon:{highway:10}
+                              }
+                        }
+            };
+
+            for(i in car){;
+                console.log(typeof(car[i]));
+                document.write(i+":");//key
+                document.write(car[i]);//value
+                document.write("<br>");
+                var n = car[i];
+                if(typeof(n) == "object"){
+                  var obj = Object.keys(n);
+                  obj_det(n);
+                  document.write("<br>");     
+                }
+                 
+            }
+            function obj_det(n){
+                for(i in n){
+                    document.write(i+":");
+                    document.write(n[i]);
+                    document.write("<br>");
+                    if(typeof(n[i])=="object"){
+                      var work = n[i];
+                      obj_det(work);
+                      }                
+                    }
+                  }
+      </script>  
+      <p>Set the variable to different object and then try...</p>
+   </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learn Java script</title>
+	<meta charset="utf-8"/>
+	<!--<script src="myScript1.js"></script>--><!--external js-->
+<script>
+	//put js hear when you want on some event call function
+	</script> 
+</head>
+
+<body>
+	<script type="text/javascript">
+
+		/*If you need a script to run as the page loads so that the script generates content in the page, then the script goes in the <body> portion of the document. In this case, you would not have any function defined using JavaScript.*/
+	function myfirst(){
+		//document.write("myfirst call");
+		document.getElementById('demo1').innerHTML="myfirst call";
+	//->	//alert box
+		 //alert("Hello! I am an alert box!");
+	//->    //confirm box
+		 /*var con = confirm("Hello! I am an alert box!");
+		 if (con){
+		 	document.getElementById("demo1").innerHTML="confirm";
+		 }
+		 else{
+		 	document.getElementById("demo1").innerHTML="not confirm";}
+		 */
+   //->     //prompt Box
+		/*var retVal = prompt("Enter your name : ", "your name here");
+              // document.write("You have entered : " + retVal);
+              document.getElementById("demo1").innerHTML = retVal;*/
+	}
+//symbol
+/*let id = Symbol("id");
+alert(id.toString(id)); // Symbol(id), now it works
+let user = { name: "John" };
+let id = Symbol("id");*/
+
+//user[id] = "ID Value";
+//document.write( user[id] ); // w
+//objects
+	//let user = {name: "John",age: 30}
+	let u = {};
+	//let user = {name: "John",sizes: {height: 182,width: 50}};
+	//const let clone = {}; // the new empty object
+	/*for (let key in user) {
+  		clone[key] = user[key];
+	}*/
+//make other object
+//	const another = Object.assign({height:"5`3"},user);
+	//const another = { ...user };
+	//console.log(another);
+	//let obj = {0: "test"};
+	//et id = Symbol("id");
+
+//for (let key in user) alert(key); // name, age (no symbols)
+// the direct access by the symbol works
+//alert( "Direct: " + user[id] );
+// both alerts access the same property (the number 0 is converted to string "0")
+/*alert( obj["0"] ); // test
+alert( obj[0] ); // test (same property)
+*/
+
+let user = {
+  
+};
+
+// first, declare
+function sayHi() {
+  alert("Hello!");
+};
+
+// then add as a method
+user.sayHi = sayHi;
+
+user.sayHi(); // Hello!
+		
+	</script>
+  <button type="button"
+  onclick="document.getElementById('demo').innerHTML = Date()">
+  Click me to display Date and Time.</button>
+  <p id="demo">demo</p>
+  <p id="demo1">demo1</p>
+  <p id="demo11">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('demo11').style.fontSize='35px'">Click Me!</button>
+<button type="button" onclick="myfirst()">function</button>
+<button type="button" onclick="document.getElementById('demo11').style.display='none'"> hide
+</button>
+
+
+
+</body>
+</html>

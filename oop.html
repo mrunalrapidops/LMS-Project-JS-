@@ -1,0 +1,48 @@
+<html>
+<head>
+</head>
+<body>
+	<meta charset="UTF-8">
+<script type="text/javascript">
+/*doSomething();   // <---- The function you're measuring time for 
+var t1 = performance.now();
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+*/
+let user = { name: "John" };
+let admin = { name: "Admin" };
+let user1 = {name: "John",age: 30};
+user1.sayHii = function(){
+	document.write(user.name);
+};
+user1.sayHii();
+//global function 
+function sayHi() {
+  alert(this.name);
+};
+//calling function 1
+user.sayHi = sayHi;
+user.sayHi();
+
+
+
+// use the same functions in two objects 2
+user.f = sayHi;
+admin.f = sayHi;
+user.f(); // John  (this == user)
+admin.f(); // Admin  (this == admin)
+admin['f'](); // Admin (dot or square brackets access the method – doesn't matter) 
+function say() {
+  alert(this);//object window
+}
+
+say(); // undefined
+// Hello*/
+//time me
+/*var t0 = performance.now();
+var t1 = performance.now();
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")	*/
+// browser cache
+</script>
+<h1>OOPS concept</h1>
+</body>
+</html>

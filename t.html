@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ </head>
+ <body>
+
+ 	<h1>My First Web Page</h1>
+ 	<p>My First Paragraph</p>
+
+ 	<p id="demo">
+ 		<h1>Task</h1>
+ 		<table>
+ 			<th>Table index</th>
+ 			<th>value</th>
+ 			<th>Dt</th>
+ 			<th>count</th>
+
+ 		</table>
+ 	</p>
+
+ 	<script>
+//original array
+//var sample_input = [1,2,"mr","ra",[0,2,4],true,function add(val1,val2){return val1+val2},new Date(2018, 11, 24),{1:"one",2:"two",3:"three"},{"isbn": ["123-456-222"], "author": {"lname": "Doe","fname": "Jane"}}];
+document.write("<b>sample_input</b>");
+document.write("</br>");
+var sample_input = [10,20,"akshay","mrunal",{a:{b:function add(val1,val2){return val1+val2},c:"ronak",d:10}}];
+var new_output = new Array();
+var new_outputs_obj = {}
+var al = sample_input.length
+document.write("object size" , al);
+document.createElement('br');
+var count = 1;
+for(var i=0;i<al;i++)
+{	
+	var type = typeof(sample_input[i]);
+	if (type == "number"){
+		var value = sample_input[i] + count;
+		count ++ ; 
+	// console.log(i , sample_input[i],"no.", count);
+	// document.write('<br/>');
+	// document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","no." ,"&nbsp;", count);
+	//new_output['sample_input[i]'] = count;
+	new_outputs_obj['key'] = sample_input[i];
+	new_outputs_obj['value'] =value;
+	new_output.push(new_outputs_obj);
+	new_outputs_obj = {};
+}
+else if(type == "string"){
+	// console.log(i , sample_input[i] ,"string", sample_input[i]);
+	// document.write('<br/>');
+	// document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","string." ,"&nbsp;", count);
+	new_outputs_obj['key'] = sample_input[i];
+	new_outputs_obj['value'] =sample_input[i];
+	new_output.push(new_outputs_obj);
+	new_outputs_obj = {};
+}
+else if(type == "object"){
+	let obj = sample_input[i];
+	new_outputs_obj["key"]= String(Object.keys(obj))
+
+	for (a in sample_input[i]){
+		
+	
+		let checkValues = obj[a] ;
+
+		//console.log(checkValues)
+		// console.log(new_outputs_obj);
+		for( k in checkValues){
+		
+			new_outputs_obj.key.subkey = k ;
+			console.log(new_outputs_obj.key.subkey);
+			
+			new_outputs_obj["key"]["subValue"] = obj[a][k];
+			console.log(new_outputs_obj.key);
+			
+	}
+
+			
+	}new_output.push(new_outputs_obj);
+
+	new_outputs_obj = {};
+
+	// 	if (Array.isArray(sample_input[i])){
+	// 		var nl = sample_input[i].length
+	// 		for (var j=0;j>=nl-1;j++){
+	// 		}
+	// 		console.log(i , sample_input[i] ,"Array", count);
+	// 		document.write('<br/>');
+	// 		document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","Array" ,"&nbsp;", count);
+	// 		continue;
+	// 	}
+	// 	if (sample_input[i] instanceof Date){
+	// 	    console.log(i , sample_input[i] ,"date", count);
+	// 	    document.write('<br/>');
+	// 	    document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","date" ,"&nbsp;", count);	
+	// 	    continue;
+	// 	}
+	// console.log(i , sample_input[i] ,"obj", count);
+	// document.write('<br/>');
+	// document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","obj" ,"&nbsp;", count);
+}
+else if(type == "function"){
+	console.log(i , sample_input[i] ,"fun",sample_input[i](10,20) );
+	document.write('<br/>');
+	document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","fun" ,"&nbsp;", sample_input[i](10,20));
+}
+else if(type == "boolean"){
+	console.log(i , sample_input[i] ,"bool", count);
+	document.write('<br/>');
+	document.write(i ,"&nbsp;", sample_input[i]  ,"&nbsp;","bool" ,"&nbsp;", count);
+}
+else{
+	console.log("other thing please check")
+}
+}
+document.write("<br><b> New Array </b>");
+for (var a = 0; a < new_output.length; a++) {
+    //console.log(new_output[a]);
+    document.write('<br/>');
+    document.write(a ,"&nbsp;", new_output[a]);
+
+    /*	document.write(a ,"&nbsp;","key", new_output[a][key],"val",new_output[a][value]);*/
+
+
+
+}
+/*
+ var arr = [{username: 'Jon', genrePref: 'rock'},{username: 'Lucy', genrePref: 'pop'},{username: 'Mike', genrePref: 'rock'},{username: 'Luke', genrePref: 'house'}];
+	
+	var text = "<table border ='1'><tr><th>Username</th><th>genrePref</th></tr>"
+	for (var i=0;i<arr.length;i++){
+     text+="<tr><td>"+arr[i].username+"</td><td>"+arr[i].genrePref+"</td></tr>"				
+	}
+	text+="</table>";
+    document.write(text);
+    */
+    console.log(" aya thi array chhee..");
+console.log(new_output);
+</script>
+
+</body>
+</html> 
