@@ -1,0 +1,25 @@
+<h1 [class.red]="h1Style">WELCOME TO DASHBOARD</h1>
+
+<div>
+  
+    <ul *ngIf="station">
+        <li *ngFor= "let station of station.stationBeanList | slice:0:5;">
+         
+          <P>{{station.stationName}}</P>
+          
+        </li>
+      </ul>
+      
+    </div>
+
+<!-- <h1 [ngClass]="{
+  'red':h1Style,
+  'large':!h1Style}">Css_Property</h1>
+
+<h1 [style.color]= "h1Style ? 'gray': 'large'">HOME</h1>
+<h1 [ngStyle]="{
+  'color':h1Style ? 'gray': 'black',
+  'font-size':!h1Style ? '1em' : '4em'
+}">options</h1> -->
+
+<button (click)="firstClick()">Click Me</button>

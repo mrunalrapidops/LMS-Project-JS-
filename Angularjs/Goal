@@ -1,0 +1,74 @@
+"NO Depression Only Impress Your Self"
+#Main
+https://angular.io/guide/quickstart
+--------------------------------------------------------------------
+#life cycle of a component
+https://dzone.com/articles/angular-6-part-3-life-cycle-of-a-component
+--------------------------------------------------------------------
+#Refrence
+-> https://codecraft.tv/courses/angular/http/overview/
+-> Codevolution
+-> codedamn
+-> https://www.techiediaries.com/angular-httpclient/, 
+-> Angular 7 Call Rest API using Get with Params and POST Techie Ocean
+-> https://www.youtube.com/watch?v=e8BlURn6SFk 
+-> https://codecraft.tv/courses/angular/http/overview/
+
+#Youtube
+*Hindi
+Sahosoft Solutions
+https://youtu.be/sY2aMvNzblY(CURD)
+
+*English
+Mosh:-https://youtu.be/k5E2AVpwsko
+Codevolution***:pl:-https://youtu.be/0eWrpsCLMJQ?list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ
+CodAffection:-https://youtu.be/jYvkMv7LzCw(CRUD with Web API)
+khlearn withme:-https://youtu.be/L-rS6Rn6WpM(CRUD API node js, express and MongoDB)
+-------------------------------------------------------------------
+#Topics of Angular
+Introduction
+Angular Architecture 
+Decorators
+Lifecycle Hooks
+Components
+interpolation & Expressions
+Bindings
+Service
+Http Request
+Configure Proxy for API call
+Routing
+	MongoDB + Angular + Node Registration
+	NodeJS Setup (Registration Part 2)
+	MongoDB Setup (Registration Part 3)
+	Linking MongoDB with Angular (Registration Part 4)
+Pipes
+Custom Pipes
+Directives
+	Login
+Routing Protection
+	set Backend
+Persistent Login Session	
+	Logout
+	MongoDB + Angular + Node Registration
+Sessions
+	Editing and storing data in MongoDB through Angular
+Redux - Introduction
+Redux - Getting Started
+Creating a Reducer
+Registering a reducer
+Getting Data from Redux Store
+Creating a Reducer
+Registering a reducer
+Getting Data from Redux Store
+Angular Project? Let's learn Angular!
+How to deploy Angular 7 Application To Production?
+-------------------------------------------------------------------
+#Topics of Exercise
+Routing
+Service
+Todo List
+CRUD
+External API
+Reg.Form (Google,Facebook)
+---------------------------------------------------------
+
