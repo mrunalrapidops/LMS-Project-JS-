@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var app = express();
 var port = 8000;
 var multer = require('multer'); // v1.0.5
-var storage =   multer.diskStorage({
+var storage =  multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, './uploads');
   },

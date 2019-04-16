@@ -52,11 +52,19 @@ app.use(bodyParser.json())
 app.post("/page2", (req, res) => {  
   res.render('page2',{ body: req.body});
   /*res.send('name: ' + req.query['name']); */
+  console.log("req.body.pic:",req.body.pic);//get req
   console.log("req.query:",req.query);//get req
   console.log("req.body:",req.body);// post req
   console.log("typeof req.body:",typeof req.body);// post req type
   console.log("req.params:",req.params);
 
+});
+app.get("/page2", (req, res) => {  
+  /* res.render('page2',{ body: req.body}); */
+  //res.send('name: ' + req.query['fname']); 
+  res.send('page2',{'Fname': req.query['fname']});
+  //res.render('page2',{'Fname': req.query['fname'], 'pic': req.query['pic']});
+  console.log("req.query:",req.query);//get req
 });
 app.get("/getdata", (req, res) => { 
     User.find({}, function(err, data){
@@ -119,7 +127,7 @@ app.post("/addemp", (req, res) => {//can list of emp
         Hobby: req.body.Hobby,
         Email:req.body.email,
         Password: req.body.psw,
-        image: req.body.pic,
+        image: req.body.image,
         Interest:req.body.Interest,   
         Roal: req.body.Roal,
         Blood_Group: req.body.Blood_Group,

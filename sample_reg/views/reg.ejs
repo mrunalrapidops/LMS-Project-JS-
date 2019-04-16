@@ -5,15 +5,20 @@
     </head>
         </head>
     <body>
-         <form method="post" action="/page2" enctype="multipart/form-data">
+        <form action="/page2" method="POST" enctype=multipart/form-data>
+          <input type="text" name="fname">
+          <input type="file" name="pic"> 
+          <input type = "submit">
+        </form>
+         <!-- <form method="post" action="/page2" enctype="multipart/form-data">
             <div class="container">
               <h1>Register</h1> 
               
               <hr>
               <label for="Name"><b>Name</b></label>
-              <input type="text" placeholder="First" name="name" required>
-              <input type="text" placeholder="Middle" name="middle" required>
-              <input type="text" placeholder="Last" name="last" required>
+              <input type="text" placeholder="First" name="name" >
+              <input type="text" placeholder="Middle" name="middle" >
+              <input type="text" placeholder="Last" name="last">
               
               <br><br>
               <label for="Bod"><b>Birthdate</b></label>
@@ -50,16 +55,16 @@
               <br>
 
               <label for="email"><b>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <input type="text" placeholder="Enter Email" name="email" >
               <br>
               <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
+              <input type="password" placeholder="Enter Password" name="psw">
               
               <label for="psw-repeat"><b>Repeat Password</b></label>
-              <input type="password" placeholder="Repeat Password" name="repeat" required>
+              <input type="password" placeholder="Repeat Password" name="repeat">
               <br>
                 <label for="files" class="btn">Select Profile image</label>
-                <input type="file" name="pic" accept="image/*" value="upload Profile pic"><br>
+                <input type="file" name="image" id="image" value="upload Profile pic" accept="image/*" ><br> 
                 <img id="blah" src="#" alt="your image Display hear" />
                 <br>
                 <label for="psw" name="Message"><b>Message</b></label>
@@ -100,7 +105,7 @@
             <div class="container signin">
               <p>Already have an account? <a href="login.ejs">login</a>.</p>
             </div>
-          </form> 
+          </form>  -->
 
 <!-- <input id="fileupload" type="file" />
 <hr />
